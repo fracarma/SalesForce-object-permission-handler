@@ -20,7 +20,7 @@ It uses a Singleton pattern to avoid query repeating.
 
  * **Parameters:**
    * `objectAPIName` — the API name of the object
-   * `permission` — which kind of permission we are checking. Accepted values are 'create','read','edit','delete','view all','modify all'
+   * `permission` — which kind of permission we are checking. Accepted values are 'create','read','edit','delete','view all','modify all'.
  * **Returns:** return true if the specified user has the specified permission for that object
 
 ### `public Map<String,Map<String,Boolean>> getUserPermissionMap ()`
@@ -29,13 +29,10 @@ It uses a Singleton pattern to avoid query repeating.
 
      Pay attention: both object name and permission type are case sensitive!
 
-     accepted value for permission type ar: 'create','read',
-
-     'edit','delete','view all','modify all'
- * **Example:** *   ObjectPermissionHandler objPermissionHandler = ObjectPermissionHandler.getInstance();
-
-     <p>
-
-     Map<String,Map<String,Boolean>> userPermissionMap = objPermissionHandler.getUserPermissionMap();
-
-     System.assertEquals(false, userPermissionMap.get('Account').get('view all'));
+     accepted value for permission type are 'create','read','edit','delete','view all','modify all'.
+ * **Example:**    
+```
+ObjectPermissionHandler objPermissionHandler = ObjectPermissionHandler.getInstance();
+Map<String,Map<String,Boolean>> userPermissionMap = objPermissionHandler.getUserPermissionMap();
+System.assertEquals(false, userPermissionMap.get('Account').get('view all'));
+```
