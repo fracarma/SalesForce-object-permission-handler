@@ -10,7 +10,7 @@ It uses a Singleton pattern to avoid query repeating.
 
 ### `public static ObjectPermissionHandler getInstance()`
 
- * **Returns:** the instance of ObjectPermissionHandler
+ * **Returns:** the instance of ObjectPermissionHandler with the current user set
 
 ### `public static ObjectPermissionHandler getInstance(Id userId)`
 
